@@ -44,7 +44,7 @@ export function ProjectVisual({ project, showLabel = true }) {
 function ProjectCard({ project, onSelect }) {
   return (
     <article className="project-card">
-      <div className={`project-card__image${project.screenshots?.length ? ' project-card__image--screenshot' : ''}`}>
+      <div className={`project-card__image${project.screenshots?.length || project.imageFit === 'contain' ? ' project-card__image--screenshot' : ''}`}>
         <ProjectVisual project={project} />
         <span className="project-card__category">
           {project.category === 'web' ? 'Web Development' : 'Data Science'}

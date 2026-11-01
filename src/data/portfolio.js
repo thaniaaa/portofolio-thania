@@ -18,6 +18,11 @@ import cetakiaDocumentHistory from '../assets/Screenshot 2026-11-01 155930.png'
 import cetakiaConfirmReceipt from '../assets/Screenshot 2026-11-01 160206.png'
 import buildingDamageResult from '../assets/image (4).png'
 import buildingDamageHome from '../assets/image (6).png'
+import tasklyTasks from '../assets/Screenshot 2026-11-02 002906.png'
+import tasklyArchive from '../assets/Screenshot 2026-11-02 002930.png'
+import tasklyDashboard from '../assets/Screenshot 2026-11-02 002946.png'
+import tasklyNewTask from '../assets/Screenshot 2026-11-02 003000.png'
+import sentimentJournalPage from '../assets/Screenshot 2026-11-02 004959.png'
 
 export const portfolio = {
   profile: {
@@ -112,6 +117,28 @@ export const portfolio = {
   ],
   projects: [
     {
+      id: 'taskly-task-manager',
+      category: 'web',
+      title: 'Taskly – Personal Productivity Workspace',
+      description:
+        'A personal task manager for organizing activities, tracking progress, and keeping deadlines in view.',
+      longDescription:
+        'Taskly is a personal productivity web application built with HTML, CSS, and JavaScript. It helps users create and organize tasks, filter them by status and priority, monitor progress on a dashboard, view upcoming deadlines on a calendar, and manage archived tasks through a clear, structured interface.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: tasklyTasks,
+      imageAlt: 'Taskly task manager showing a list of tasks and filters',
+      screenshots: [
+        { src: tasklyTasks, alt: 'Taskly task list with status and priority controls', label: 'Task list', width: 1913, height: 870 },
+        { src: tasklyDashboard, alt: 'Taskly dashboard with progress summary, calendar, and deadlines', label: 'Dashboard', width: 1913, height: 862 },
+        { src: tasklyNewTask, alt: 'Form for creating a new task in Taskly', label: 'New task', width: 1890, height: 850 },
+        { src: tasklyArchive, alt: 'Taskly archived tasks page', label: 'Task archive', width: 1907, height: 847 },
+      ],
+      visualTone: 'yellow',
+      actionLabel: 'Live Demo',
+      demoUrl: 'https://task-manager-drab-pi.vercel.app/',
+      repositoryUrl: 'https://github.com/thaniaaa/task-manager.git',
+    },
+    {
       id: 'cetakia-erp',
       category: 'web',
       title: 'Cetakia – Integrated Printing Business ERP Platform',
@@ -156,7 +183,7 @@ export const portfolio = {
       visualTone: 'coral',
       actionLabel: 'View Details',
       demoUrl: null,
-      repositoryUrl: 'https://github.com/thaniaaa/e-paper-smcom.git',
+      repositoryUrl: '',
     },
     {
       id: 'wissemar-tourism',
@@ -190,14 +217,17 @@ export const portfolio = {
       description:
         'Fine-tuned IndoBERT model using Hugging Face to classify customer feedback with high accuracy.',
       longDescription:
-        'A natural language processing project for identifying sentiment across specific aspects of customer feedback. The workflow uses a fine-tuned IndoBERT model through Hugging Face to prepare, classify, and evaluate Indonesian-language responses.',
+        'A natural language processing project for identifying sentiment across specific aspects of Indonesian hotel reviews. The workflow uses a fine-tuned IndoBERT model through Hugging Face to prepare, classify, and evaluate responses. The research was published in the Journal of Applied Informatics and Computing (JAIC), Vol. 9, No. 6, December 2025.',
       technologies: ['Python', 'Hugging Face', 'IndoBERT'],
-      image: null,
-      imageAlt: 'Aspect-Based Sentiment Analysis dashboard',
+      image: sentimentJournalPage,
+      imageAlt: 'First page of the published IndoBERT sentiment analysis article in JAIC',
+      imageFit: 'contain',
+      mediaLabel: 'Journal publication',
+      mediaUrl: sentimentJournalPage,
       visualTone: 'purple',
       actionLabel: 'View Details',
       demoUrl: null,
-      repositoryUrl: null,
+      repositoryUrl: 'https://doi.org/10.30871/jaic.v9i6.11409',
     },
     {
       id: 'building-damage-detection',
@@ -216,8 +246,8 @@ export const portfolio = {
       ],
       visualTone: 'cyan',
       actionLabel: 'Live Demo',
-      demoUrl: null,
-      repositoryUrl: null,
+      demoUrl: 'https://deteksibangunan.streamlit.app/',
+      repositoryUrl: 'https://github.com/thaniaaa/deteksi-bangunan.git',
     },
   ],
   contact: {
@@ -225,7 +255,7 @@ export const portfolio = {
     email: 'thaniaaprilah05@gmail.com',
     linkedinLabel: 'linkedin.com/in/thaniaaprilah',
     linkedinUrl: 'https://linkedin.com/in/thaniaaprilah',
-    githubLabel: 'github.com/thaniaaprilah',
-    githubUrl: 'https://github.com/thaniaaprilah',
+    githubLabel: 'github.com/thaniaaaa',
+    githubUrl: 'https://github.com/thaniaaa',
   },
 }

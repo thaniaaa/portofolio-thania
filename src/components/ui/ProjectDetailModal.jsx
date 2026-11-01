@@ -142,9 +142,9 @@ function ProjectDetailModal({ project, onClose }) {
             </a>
           </div>
         ) : (
-          <div className="project-modal__media">
+          <div className={`project-modal__media${project.imageFit === 'contain' ? ' project-modal__media--contain' : ''}`}>
             <ProjectVisual project={project} showLabel={false} />
-            <span className="project-modal__screenshot-badge">Project screenshot</span>
+            <span className="project-modal__screenshot-badge">{project.mediaLabel || 'Project screenshot'}</span>
           </div>
         )}
 
@@ -156,6 +156,12 @@ function ProjectDetailModal({ project, onClose }) {
           <p className="project-modal__description" id="project-modal-description">
             {project.longDescription || project.description}
           </p>
+
+          {project.mediaUrl && (
+            <a className="project-modal__media-link" href={project.mediaUrl} target="_blank" rel="noopener noreferrer">
+              View journal page in full size ↗
+            </a>
+          )}
 
           <div className="project-modal__stack">
             <h3>{project.stackLabel || 'Tech Stack'}</h3>

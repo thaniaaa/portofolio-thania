@@ -825,6 +825,11 @@ a.project-card__action:hover {
   object-fit: cover;
 }
 
+.project-modal__media--contain > img {
+  object-fit: contain;
+  background: #fff;
+}
+
 .project-modal__gallery {
   display: flex;
   min-width: 0;
@@ -965,6 +970,14 @@ a.project-card__action:hover {
   color: var(--color-muted);
   font-size: 0.95rem;
   line-height: 1.72;
+}
+
+.project-modal__media-link {
+  margin: -12px 0 24px;
+  color: var(--color-coral-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-underline-offset: 4px;
 }
 
 .project-modal__stack {
