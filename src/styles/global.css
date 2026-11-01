@@ -1,0 +1,111 @@
+:root {
+  --section-bg-warm: #faf6f0;
+  --section-bg-pastel: #e3e8ec;
+  --color-background: var(--section-bg-warm);
+  --color-background-alt: var(--section-bg-pastel);
+  --color-primary: var(--section-bg-pastel);
+  --color-accent: #f4e6a5;
+  --color-coral: #e07a5f;
+  --color-coral-dark: #c96349;
+  --color-coral-soft: #f5ddd5;
+  --color-surface: #fffdf9;
+  --color-surface-soft: #f8f4ef;
+  --color-ink: #1e293b;
+  --color-muted: #475569;
+  --color-line: #e2dcd5;
+  --color-lilac: #f5ddd5;
+  --shadow-soft: 0 1px 2px rgba(30, 41, 59, 0.08), 0 6px 18px rgba(30, 41, 59, 0.06);
+  --shadow-card: 0 1px 3px rgba(30, 41, 59, 0.11), 0 8px 20px rgba(30, 41, 59, 0.05);
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --container: 1120px;
+  --header-height: 76px;
+  color: var(--color-ink);
+  background: var(--color-background);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-background);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body,
+button,
+a {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 4px;
+}
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+.container {
+  width: min(calc(100% - 48px), var(--container));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 32px), var(--container));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
