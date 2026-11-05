@@ -101,8 +101,8 @@ function HeroSection({ profile }) {
                 onClick={() => setIsModalOpen(true)}
                 ref={resumeButtonRef}
               >
-                Download Resume
-                <span aria-hidden="true">↓</span>
+                View Resume
+                <span aria-hidden="true">↗</span>
               </button>
             </motion.div>
           </motion.div>
@@ -153,17 +153,26 @@ function HeroSection({ profile }) {
               <span aria-hidden="true">×</span>
             </button>
 
-            <p className="resume-modal__eyebrow">Download resume</p>
+            <p className="resume-modal__eyebrow">View resume</p>
             <h2 id="resume-modal-title">Select Resume Version</h2>
             <p className="resume-modal__description">
               Choose the resume that best matches the role you are looking for.
             </p>
 
             <div className="resume-modal__options">
-              <ButtonLink href={profile.cvWebUrl} download>
+              <ButtonLink
+                href={profile.cvWebUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Web Developer CV
               </ButtonLink>
-              <ButtonLink href={profile.cvDataUrl} variant="secondary" download>
+              <ButtonLink
+                href={profile.cvDataUrl}
+                variant="secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Data Science CV
               </ButtonLink>
             </div>
